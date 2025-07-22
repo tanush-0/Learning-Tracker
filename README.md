@@ -18,8 +18,7 @@ Each week I log what I’ve learned, built, or explored. Check the `progress/` f
 
 | Project        | Description                  | Status   |
 |----------------|------------------------------|----------|
-| Portfolio Site | Personal website using HTML/CSS/JS | ✅ Done |
-| Blog App       | Fullstack app using MERN     | 🚧 WIP   |
+| Portfolio Site | Personal website using HTML/CSS/JS | 🚧 WIP |
 
 ---
 
