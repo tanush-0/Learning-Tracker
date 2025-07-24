@@ -1,0 +1,93 @@
+/* Reset + Base */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 40px;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #007acc;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Flex Box */
+.main-content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Card */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+h1{
+    color: #007acc;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+a{
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer{
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
+
+.block-element{
+    display: block;
+}
+
+.inline-element{
+    display: inline;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a:hover{
+    text-decoration: underline;
+}
