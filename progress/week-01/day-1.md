@@ -2,7 +2,7 @@
 
 ## ✅ What I Did
 - Learned basic HTML tags and structure
-- Created my first webpage: `about-me`
+- Created my new webpage: `index.html`
 - Structured my folders for tracking and projects
 
 ## 🧠 Notes
