@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Tanush - About Me</title>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function toggleInfo() {
+            const info = document.getElementById("extra-info");
+            info.style.display = info.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -20,6 +30,13 @@
             <p>This is my very new website. I created it from strach using only HTML and embedded CSS!</p>
             <p>✨ More to come soon…</p>
         </div>
+    </div>
+
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button onclick="toggleInfo()">Show More Info</button>
+
+    <div id="extra-info">
+        <p>I love exploring how websites are built, and I'm especially curious about Cybersecurity and Ethical hacking. This journey will be full of code and caffeine!</p>
     </div>
 
     <footer class="footer">
