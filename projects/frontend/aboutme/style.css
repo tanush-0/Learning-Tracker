@@ -1,150 +1,166 @@
-/* Reset + Base */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* CSS Variables for Light Mode */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --primary: #007acc;
+  --secondary: #e0f0ff;
+  --card-bg: #fff;
+  --nav-bg: #007acc;
+  --footer-bg: #333;
+  --button-bg: #007acc;
+  --button-hover: #e0f0ff;
+  --button-hover-text: #1a1a1a;
 }
 
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0px;
-    color: #333;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Dark Mode Override */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f4f4f4;
+  --primary: #89CFF0;
+  --card-bg: #1e1e1e;
+  --nav-bg: #1a1a1a;
+  --footer-bg: #1a1a1a;
+  --button-bg: #1a1a1a;
+  --button-hover: #333;
+  --button-hover-text: #89CFF0;
 }
 
-body, .card, .navbar, .footer, a {
-    transition: all 0.3s ease-in-out;
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#extra-info{
-    display: none;
-    margin-top: 15px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Dark Mode */
-.dark-mode{
-    background-color: #121212;
-    color: #f4f4f4;
+h1 {
+  color: var(--primary);
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
 }
 
-body.dark-mode .card {
-    background-color: #1e1e1e;
-    color: #f4f4f4;
+p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-body.dark-mode .navbar {
-    background-color: #1a1a1a;
+a {
+  color: var(--primary);
+  text-decoration: none;
+  margin: 2px;
 }
 
-body.dark-mode .footer {
-    background-color: #1a1a1a;
-    color: #ccc;
-}
-
-body.dark-mode a {
-    color: #89CFF0;
+a:hover {
+  text-decoration: underline;
 }
 
 /* Navbar */
-.navbar{
-    background-color: #007acc;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.navbar {
+  background-color: var(--nav-bg);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.navbar a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    flex-wrap: wrap;
-    text-align: center;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Main Flex Box */
-.main-content{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+.navbar a.active {
+  border-bottom: 2px solid white;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
 }
 
 /* Card */
 .card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
-h1{
-    color: #007acc;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
+/* Skills */
+.skills {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-p{
-    font-size: 1rem;
-    line-height: 1.6;
+.skill-tag {
+  background-color: var(--secondary);
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-a{
-    color: #007bff;
-    text-decoration: none;
+/* Extra Info Toggle */
+#extra-info {
+  display: none;
+  margin-top: 15px;
+}
+
+/* Buttons */
+button {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  color: var(--button-hover-text);
 }
 
 /* Footer */
-.footer{
-    text-align: center;
-    padding: 15px;
-    background-color: #333;
-    color: white;
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--footer-bg);
+  color: white;
 }
 
-/* Utilities */
-.block-element{
-    display: block;
-}
-
-.inline-element{
-    display: inline;
-}
-
-.flex-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hidden {
-    display: none;
-}
-
-.center-text {
-    text-align: center;
-}
-
-a:hover{
-    text-decoration: underline;
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .main-content {
-        padding: 20px 10px;
-    }
+  .main-content {
+    padding: 20px 10px;
+  }
 }

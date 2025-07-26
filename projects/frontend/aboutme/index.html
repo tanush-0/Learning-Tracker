@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Tanush - About Me</title>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tanush - About Me</title>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
 
-        function toggleInfo() {
-            const info = document.getElementById("extra-info");
-            info.style.display = info.style.display === "none" ? "block" : "none";
-        }
-    </script>
+    function toggleInfo() {
+      const info = document.getElementById("extra-info");
+      info.style.display = info.style.display === "none" ? "block" : "none";
+    }
+  </script>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+  <header>
+    <nav class="navbar" role="navigation">
+      <a href="#" class="active">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
     </nav>
+  </header>
 
-    <div class="main-content">
-        <div class="card">
-            <h1>Hello, I'm Tanush!</h1>
-            <p>I'm class 11th student working hard on my JEE preparation while learning Full-Stack Development with a focus on Cybersecurity.</p>
-            <p>This is my very new website. I created it from strach using only HTML and embedded CSS!</p>
-            <p>✨ More to come soon…</p>
-        </div>
-    </div>
+  <main class="main-content">
+    <article class="card">
+      <h1>Hello, I'm Tanush!</h1>
+      <p>I'm a class 11th student working hard on my JEE preparation while learning Full-Stack Development with a focus on Cybersecurity.</p>
+      <p>This is my very new website. I created it from scratch using only HTML, CSS, and a little JavaScript!</p>
+      <p>✨ More to come soon…</p>
+    </article>
+  </main>
 
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    <button onclick="toggleInfo()">Show More Info</button>
+  <section class="skills" aria-label="Skills section">
+    <div class="skill-tag">HTML</div>
+    <div class="skill-tag">CSS</div>
+    <div class="skill-tag">JavaScript</div>
+    <div class="skill-tag">Linux</div>
+    <div class="skill-tag">Git</div>
+    <div class="skill-tag">Cybersecurity</div>
+  </section>
+
+  <section style="margin: 5px;">
+    <button onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
+    <button onclick="toggleInfo()" aria-label="Toggle More Info">Show More Info</button>
 
     <div id="extra-info">
-        <p>I love exploring how websites are built, and I'm especially curious about Cybersecurity and Ethical hacking. This journey will be full of code and caffeine!</p>
+      <p>I love exploring how websites are built, and I'm especially curious about Cybersecurity and Ethical Hacking. This journey will be full of code and caffeine!</p>
     </div>
+  </section>
 
-    <footer class="footer">
-        © 2025 Tanush. All rights reserved.
-    </footer>
-    
+  <footer class="footer" role="contentinfo">
+    © 2025 Tanush. All rights reserved.
+  </footer>
 </body>
 </html>
