@@ -3,26 +3,35 @@
   --bg-color: #f4f4f4;
   --text-color: #333;
   --primary: #007acc;
-  --secondary: #e0f0ff;
+  --primary-hover:#e0f0ff;
+  --secondary: #f4f4f4;
   --card-bg: #fff;
   --nav-bg: #007acc;
   --footer-bg: #333;
   --button-bg: #007acc;
   --button-hover: #2a2a2a;
   --button-hover-text: #1a1a1a;
+  --border-light: #ccc;
+  --button-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Dark Mode Override */
 .dark-mode {
   --bg-color: #121212;
   --text-color: #f4f4f4;
-  --primary: #89CFF0;
+  --primary: #89CFF0;                /* Soft blue for accents/links */
+  --primary-hover: #1e3a56;          /* Slightly darker blue */
+  --secondary: #1e1e1e;              /* For skill tags or secondary blocks */
   --card-bg: #1e1e1e;
   --nav-bg: #1a1a1a;
   --footer-bg: #1a1a1a;
   --button-bg: #1a1a1a;
-  --button-hover: #333;
+  --button-hover: #333333;
   --button-hover-text: #89CFF0;
+  --border-light: #444;              /* Slight border contrast */
+  --button-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 /* Base Styles */
@@ -48,12 +57,14 @@ body {
 }
 
 h1 {
+  font-size: 2rem; /* Or adjust to your design */
+  margin-bottom: 20px; /* Add spacing below */
   color: var(--primary);
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid var(--border-light);
   padding-bottom: 10px;
 }
 
-p {
+p {   
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -68,7 +79,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:focus-visible{
+:focus-visible{
   outline: 2px dashed var(--primary);
   outline-offset: 3px;
 }
@@ -108,7 +119,7 @@ a:focus-visible{
   color: var(--text-color);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -133,7 +144,6 @@ a:focus-visible{
 
 /* Extra Info Toggle */
 #extra-info {
-  display: none;
   margin-top: 15px;
 }
 
@@ -146,13 +156,14 @@ button {
   margin-right: 10px;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: var(--button-shadow);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: var(--button-hover);
   color: var(--button-hover-text);
+  transform: translateY(-2px); /* subtle lift effect */
 }
 
 button:focus-visible{
@@ -168,6 +179,11 @@ button:focus-visible{
   color: white;
 }
 
+/* Utilities */
+.hidden {
+  display: none !important;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .navbar {
@@ -177,5 +193,10 @@ button:focus-visible{
 
   .main-content {
     padding: 20px 10px;
+  }
+
+  button {
+    margin-bottom: 10px;
+    width: 100%;
   }
 }

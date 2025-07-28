@@ -5,16 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>Tanush - About Me</title>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-
-    function toggleInfo() {
-      const info = document.getElementById("extra-info");
-      info.style.display = info.style.display === "none" ? "block" : "none";
-    }
-  </script>
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
   <header>
@@ -44,10 +35,10 @@
   </section>
 
   <section style="margin: 5px;">
-    <button onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
-    <button onclick="toggleInfo()" aria-label="Toggle More Info">Show More Info</button>
+    <button aria-label="Toggle Dark Mode" aria-pressed="false" id="darkModeToggle">Toggle Dark Mode</button>
+    <button aria-label="Toggle More Info" aria-expanded="false" id="infoToggle">Show More Info</button>
 
-    <div id="extra-info">
+    <div id="extra-info" hidden>
       <p>I love exploring how websites are built, and I'm especially curious about Cybersecurity and Ethical Hacking. This journey will be full of code and caffeine!</p>
     </div>
   </section>
