@@ -69,6 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ## 📈 Day 8 (Next)
 
-- Add smooth animations for toggling extra info.
-- Implement fade-in effects on page load.
-- Persist dark mode preference using `localStorage`.
+- Practicing:
+  - Tabbed Interface for notes/resources integration (clean UI component)
+  - Modal Window to display notes dynamically (useful for overlays and interactivity)
