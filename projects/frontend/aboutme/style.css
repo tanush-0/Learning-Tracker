@@ -142,6 +142,49 @@ a:hover {
   font-weight: bold;
 }
 
+/* Notes-Section */
+.notes-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  border: none;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.tab-button.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  line-height: 1.6;
+}
+
+.tab-content[hidden] {
+  display: none;
+}
+
+.tab-content:not([hidden]) {
+  display: block;
+}
+
 /* Extra Info Toggle */
 #extra-info {
   margin-top: 15px;

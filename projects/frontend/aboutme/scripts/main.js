@@ -16,3 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
     document.getElementById("infoToggle").addEventListener("click", toggleInfo);
 });
+
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const targetId = button.getAttribute("data-tab");
+
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        tabContents.forEach(content => {
+            content.hidden = content.id !== targetId;
+        });
+    });
+});
