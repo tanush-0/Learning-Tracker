@@ -11,14 +11,16 @@ Welcome to my personal learning tracker where I document my journey in:
 ## 🧠 Weekly Progress
 
 Each week I log what I’ve learned, built, or explored. Check the `progress/` folder.
-
+🔨
 ---
 
 ## 🛠️ Current Projects
 
 | Project        | Description                  | Status   |
 |----------------|------------------------------|----------|
-| Portfolio Site | Personal website using HTML/CSS/JS | 🚧 WIP |
+| AboutMe | About Me website using HTML/CSS/JS | ✅ DONE |
+| Portfolio Site | Personal website using HTML/CSS/JS | 🚧 Soon |
+| CyberSecurity Challenges | Practice of some CTF | 🔨 WIP |
 
 ---
 
