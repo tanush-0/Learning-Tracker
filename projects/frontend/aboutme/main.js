@@ -21,6 +21,13 @@ function toggleProjects() {
   projectsToggle.setAttribute("aria-expanded", expanded);
 }
 
+function toggleDetails(button) {
+  const details = button.previousElementSibling;
+  details.classList.toggle("hidden");
+  button.textContent = details.classList.contains("hidden") ? "Read More" : "Show Less";
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
     document.getElementById("infoToggle").addEventListener("click", toggleInfo);

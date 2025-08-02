@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>Tanush - About Me</title>
-  <script src="scripts/main.js" defer></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <header>
@@ -13,6 +13,9 @@
       <a href="#" class="active">Home</a>
       <a href="#" class="active">Projects</a>
       <a href="#" class="active">Contact</a>
+      <a href="#projects" class="active">Projects</a>
+      <a href="#cyber-journal" class="active">Cybersecurity</a>
+      <a href="#physics-recap" class="active">Physics</a>
     </nav>
   </header>
 
@@ -25,7 +28,7 @@
     </article>
   </main>
 
-  <section class="projects-section" aria-label="My Projects">
+  <section id="projects" class="projects-section" aria-label="My Projects">
     <h2>Projects</h2>
     <div class="projects-container">
       <div class="project-card">
@@ -44,6 +47,36 @@
         <p>This will become my official developer portfolio with more interactive sections.</p>
         <span class="project-status planned">🚧 Planned</span>
       </div>
+    </div>
+  </section>
+
+  <section id="cyber-journal" class="cyber-journal" aria-label="Cybersecurity Journal">
+    <h2>🛡️ Cybersecurity Journal</h2>
+    
+    <div class="cyber-entry">
+      <h3>Benign-looking Malware</h3>
+      <span class="badge warning">⚠️ Medium Risk</span>
+      <p class="entry-summary">Benign-looking malware looks harmless but can be dangerous.</p>
+      <p class="entry-details hidden">
+        These malware types include clipboard hijackers or disguised system tools. They're hard to detect and often escape antivirus tools by pretending to be utilities.<br>
+        🧪 Example: Clipboard crypto-jacker<br>
+        📦 Example: Fake PDF reader with spyware<br>
+        <strong>📚 Further Reading:</strong><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Security" target="_blank">MDN – Web Security</a><br>
+        <a href="https://www.geeksforgeeks.org/types-of-malware/" target="_blank">GFG – Malware Types</a><br>
+      </p>
+      <button class="toggle-button" onclick="toggleDetails(this)">Read More</button>
+    </div>
+  </section>
+
+  <section id="physics-recap" class="physics-recap" aria-label="Physics Concepts">
+    <h2>🧠 Quick Concept Recap – Physics</h2>
+    
+    <div class="formula-card">
+      <h3>Uniform Circular Motion</h3>
+      <p><strong>Centripetal Acceleration:</strong> a = v² / r</p>
+      <p><strong>Centripetal Force:</strong> F = mv² / r</p>
+      <p><strong>Tangential Velocity:</strong> v = r × ω</p>
     </div>
   </section>
 
