@@ -83,6 +83,24 @@
       <button class="toggle-button" onclick="toggleDetails(this)">Read More</button> 
     </div>
 
+    <div class="cyber-entry" id="xss-attack">
+      <h3>⚠️ Cyber Threat: XSS (Cross-Site Scripting)</h3>
+      <span class="badge warning">🚨 High Severity</span>
+      <span class="badge info">🛡️ Frontend Exploit</span>
+      <p class="entry-summary">XSS allows attackers to inject malicious JavaScript into web pages, targeting users' sessions or data.</p>
+      <p class="entry-details hidden">
+        Example: A comment box accepts HTML input. An attacker posts:
+        <code>&lt;script&gt;alert('XSS')&lt;/script&gt;</code>
+        Any user viewing it will execute the attacker’s code.
+        <br><br>
+        ✅ Fix: Always sanitize and escape user input before rendering.<br>
+        <strong>🔗 Learn More:</strong><br>
+        <a href="https://owasp.org/www-community/attacks/xss/" target="_blank">OWASP XSS Cheat Sheet</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting" target="_blank">MDN – What is XSS?</a>
+      </p>
+      <button class="toggle-button" onclick="toggleDetails(this)">Read More</button>
+    </div>
+
     <div class="cyber-entry" id="git-resources">
       <h3>🔧 Git Mastery: Learn by Doing</h3>
       <ul>
