@@ -1,5 +1,3 @@
-
-
 ## 🔹 HTML Essentials
 - MDN HTML Elements Guide: [https://developer.mozilla.org/en-US/docs/Web/HTML/Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - Semantic HTML article: [https://developer.mozilla.org/en-US/docs/Glossary/Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
