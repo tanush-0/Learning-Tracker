@@ -33,3 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("infoToggle").addEventListener("click", toggleInfo);
     document.getElementById("projectsToggle").addEventListener("click", toggleProjects);
 });
+
+// For live filtering of Projects and Journal
+function filterCards() {
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  document.querySelectorAll(".entry-card").forEach(card => {
+    const tags = card.dataset.tags;
+    const content = card.innerText.toLowerCase();
+    if (tags.includes(query) || content.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("searchInput").addEventListener("input", filterCards);
+});

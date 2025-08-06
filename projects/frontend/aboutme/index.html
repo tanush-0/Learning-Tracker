@@ -30,19 +30,20 @@
 
   <section id="projects" class="projects-section" aria-label="My Projects">
     <h2>Projects</h2>
+    <input type="text" id="searchInput" placeholder="Search projects..." aria-label="Search Projects">
     <div class="projects-container">
-      <div class="project-card">
+      <div class="project-card" data-tags="html,css,js,javascript">
         <h3>About Me Page</h3>
         <p>This responsive site showcases my HTML, CSS, and JS skills built from scratch.</p>
         <a href="https://tanush-0.github.io/Learning-Tracker/projects/frontend/aboutme" target="_blank" class="btn">Live Demo</a>
         <a href="https://github.com/tanush-0/Learning-Tracker/tree/main/projects/frontend/aboutme" target="_blank" class="btn">View Code</a>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-tags="html,linux,cybersecurity">
         <h3>Cybersecurity Challenges</h3>
         <p>Coming soon: A series of beginner-friendly CTF (Capture the Flag) tasks.</p>
         <span class="project-status in-progress">🔨 In Progress</span>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-tags="html,css,js,javascript">
         <h3>Portfolio Site</h3>
         <p>This will become my official developer portfolio with more interactive sections.</p>
         <span class="project-status planned">🚧 Planned</span>
@@ -52,8 +53,8 @@
 
   <section id="cyber-journal" class="cyber-journal" aria-label="Cybersecurity Journal">
     <h2>🛡️ Cybersecurity Journal</h2>
-    
-    <div class="cyber-entry">
+    <input type="text" id="searchInput" placeholder="Search journal..." aria-label="Search Journal">
+    <div class="cyber-entry" data-tags="html,linux,cybersecurity">
       <h3>Benign-looking Malware</h3>
       <span class="badge warning">⚠️ Medium Risk</span>
       <p class="entry-summary">Benign-looking malware looks harmless but can be dangerous.</p>
@@ -68,7 +69,7 @@
       <button class="toggle-button" onclick="toggleDetails(this)">Read More</button>
     </div>
 
-    <div class="cyber-entry" id="fileless-malware">
+    <div class="cyber-entry" id="fileless-malware" data-tags="html,linux,cybersecurity">
       <h3>📌 Malware Spotlight: Fileless Attacks</h3>
       <span class="badge warning">⚠️ Stealth Attack</span>
       <span class="badge info">🧠 Memory-based</span>
@@ -83,7 +84,7 @@
       <button class="toggle-button" onclick="toggleDetails(this)">Read More</button> 
     </div>
 
-    <div class="cyber-entry" id="xss-attack">
+    <div class="cyber-entry" id="xss-attack" data-tags="html,linux,cybersecurity">
       <h3>⚠️ Cyber Threat: XSS (Cross-Site Scripting)</h3>
       <span class="badge warning">🚨 High Severity</span>
       <span class="badge info">🛡️ Frontend Exploit</span>
@@ -100,6 +101,17 @@
       </p>
       <button class="toggle-button" onclick="toggleDetails(this)">Read More</button>
     </div>
+
+    <article class="cyber-entry" data-tags="cybersecurity,sql,xss">
+      <h3>🛡️ SQL Injection vs XSS</h3>
+      <ul>
+        <li><strong>SQL Injection</strong>: Targets backend (DB), bypasses login or destroys data.</li>
+        <li><strong>XSS</strong>: Targets frontend (browser), hijacks sessions or injects scripts.</li>
+        <li><strong>SQLi Prevention</strong>: Use <code>Prepared Statements</code>, validate input.</li>
+        <li><strong>XSS Prevention</strong>: Use <code>textContent</code>, escape input, avoid <code>innerHTML</code>.</li>
+      </ul>
+      <p><a href="https://tanush-0.github.io/Learning-Tracker/resources/security/sql-vs-xss.md" target="_blank">📄 Full notes (markdown)</a></p>
+    </article>
 
     <div class="cyber-entry" id="git-resources">
       <h3>🔧 Git Mastery: Learn by Doing</h3>
@@ -124,14 +136,7 @@
     </div>
   </section>
 
-  <section class="skills" aria-label="Skills section">
-    <div class="skill-tag">HTML</div>
-    <div class="skill-tag">CSS</div>
-    <div class="skill-tag">JavaScript</div>
-    <div class="skill-tag">Linux</div>
-    <div class="skill-tag">Git</div>
-    <div class="skill-tag">Cybersecurity</div>
-  </section>
+  
 
   <section style="margin: 5px;">
     <button aria-label="Toggle Dark Mode" aria-pressed="false" id="darkModeToggle">Toggle Dark Mode</button>
@@ -139,6 +144,14 @@
 
     <div id="extra-info" hidden>
       <p>I love exploring how websites are built, and I'm especially curious about Cybersecurity and Ethical Hacking. This journey will be full of code and caffeine!</p>
+      <section class="skills" aria-label="Skills section">
+        <div class="skill-tag">HTML</div>
+        <div class="skill-tag">CSS</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">Linux</div>
+        <div class="skill-tag">Git</div>
+        <div class="skill-tag">Cybersecurity</div>
+      </section>
     </div>
 
   </section>

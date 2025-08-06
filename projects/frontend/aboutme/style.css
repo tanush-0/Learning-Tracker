@@ -136,7 +136,7 @@ a:hover {
 }
 
 .skill-tag {
-  background-color: var(--secondary);
+  background-color: var(--button-bg);
   padding: 8px 12px;
   border-radius: 5px;
   font-weight: bold;
@@ -148,6 +148,14 @@ a:hover {
 }
 
 /* Projects */
+#searchInput {
+  padding: 10px;
+  margin: 20px 0;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--border-light);
+}
+
 .projects-section {
   margin-top: 40px;
   padding: 20px;
@@ -247,6 +255,10 @@ a:hover {
   border-radius: 8px;
   box-shadow: var(--card-shadow);
   margin-bottom: 20px;
+}
+
+.cyber-entry ul{
+  padding: 20px;
 }
 
 .badge {
