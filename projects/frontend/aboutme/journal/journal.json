@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Day 1 – HTML Basics", 
+        "tags": ["html", "basics"], 
+        "summary": "Learned semantic HTML and basic structure.", 
+        "details": "Explored tags like <!DOCTYPE>, <header>, <main>, etc.", 
+        "resources": [
+            {"label": "MDN HTML Intro", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"}
+        ]
+    }, 
+        
+    {
+        "title": "Day 2 – CSS Fundamentals", 
+        "tags": ["css", "styling"], 
+        "summary": "Applied base styling, layout structure, and hover effects.", 
+        "details": "Used flexbox, reset CSS, and created a consistent card layout.", 
+        "resources": [
+            {"label": "CSS Layout on MDN", "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout"}
+        ]
+    }
+]
