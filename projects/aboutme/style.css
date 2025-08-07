@@ -148,7 +148,7 @@ a:hover {
 }
 
 /* Projects */
-#searchInput {
+#projectSearch {
   padding: 10px 14px;
   font-size: 1rem;
   margin: 20px 0;
@@ -159,7 +159,7 @@ a:hover {
   color: var(--text-color);
 }
 
-#searchInput:focus-visible {
+#projectSearch:focus-visible {
   outline: 2px dashed var(--primary);
   outline-offset: 3px;
 }
@@ -243,6 +243,22 @@ a:hover {
 }
 
 /* Cybersecurity Journal */
+#cyberSearch {
+  padding: 10px 14px;
+  font-size: 1rem;
+  margin: 20px 0;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background-color: var(--secondary);
+  color: var(--text-color);
+}
+
+#cyberSearch:focus-visible {
+  outline: 2px dashed var(--primary);
+  outline-offset: 3px;
+}
+
 .cyber-journal {
   margin-top: 40px;
   padding: 20px;

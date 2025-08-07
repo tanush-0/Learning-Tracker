@@ -35,19 +35,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // For live filtering of Projects and Journal
-function filterCards() {
-  const query = document.getElementById("searchInput").value.toLowerCase();
-  document.querySelectorAll(".entry-card").forEach(card => {
-    const tags = card.dataset.tags;
-    const content = card.innerText.toLowerCase();
-    if (tags.includes(query) || content.includes(query)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("searchInput").addEventListener("input", filterCards);
+  const projectSearch = document.getElementById("projectSearch");
+  const cyberSearch = document.getElementById("cyberSearch");
+
+  // 🔎 Filter Project Cards
+  if (projectSearch) {
+    projectSearch.addEventListener("input", () => {
+      const value = projectSearch.value.toLowerCase();
+      document.querySelectorAll(".project-card").forEach(card => {
+        const tags = card.dataset.tags || "";
+        const content = card.innerText.toLowerCase();
+        const match = tags.includes(value) || content.includes(value);
+        card.style.display = match ? "block" : "none";
+      });
+    });
+  }
+
+  // 🔐 Filter Cybersecurity Journal Entries
+  if (cyberSearch) {
+    cyberSearch.addEventListener("input", () => {
+      const value = cyberSearch.value.toLowerCase();
+      document.querySelectorAll(".cyber-entry").forEach(entry => {
+        const tags = entry.dataset.tags || "";
+        const content = entry.innerText.toLowerCase();
+        const match = tags.includes(value) || content.includes(value);
+        entry.style.display = match ? "block" : "none";
+      });
+    });
+  }
 });
