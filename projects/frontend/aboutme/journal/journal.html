@@ -71,6 +71,25 @@
     .navbar a.active {
         border-bottom: 2px solid white;
     }
+    .search-section {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    #journalSearch {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px 14px;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid var(--border-light);
+        background-color: var(--secondary);
+        color: var(--text-color);
+    }
+    #journalSearch:focus-visible {
+        outline: 2px dashed var(--primary);
+        outline-offset: 3px;
+    }
     .journal-section {
         margin-top: 40px;
         padding: 20px;
@@ -163,6 +182,10 @@
     </nav>
   </header>
 
+  <section class="search-section" style="margin-top: 20px;">
+    <input type="search" id="journalSearch" placeholder="🔍 Search journal entries..." aria-label="Search journal" />
+  </section>
+
   <section id="journal" class="journal-section">
       <h2>📝 My Learning Journal</h2>
       <!-- Dynamic journal cards will be inserted here by JS -->
@@ -218,6 +241,63 @@
 
     // Load from JSON file
     fetch('journal.json')
+    .then(res => res.json())
+    .then(data => loadJournalEntries(data))
+    .catch(err => console.error("Failed to load journal data:", err));
+                                    
+  let journalData = [];
+
+  function createJournalCard(entry) {
+    const card = document.createElement("article");
+    card.className = "entry-card";
+    card.setAttribute("data-title", entry.title.toLowerCase());
+    card.setAttribute("data-tags", entry.tags.join(" ").toLowerCase());
+    card.setAttribute("data-summary", entry.summary.toLowerCase());
+
+    card.innerHTML = `
+        <h3>${entry.title}</h3>
+        <p><strong>Tags:</strong> ${entry.tags.map(tag => `<span class="tag">${tag}</span>`).join(" ")}</p>
+        <p>${entry.summary}</p>
+        <details><summary>Details</summary><p>${entry.details}</p></details>
+        <div class="resources">
+            <strong>Resources:</strong>
+            <ul>
+                ${entry.resources.map(r => `<li><a href="${r.url}" target="_blank">${r.label}</a></li>`).join("")}
+            </ul>
+        </div>
+    `;
+    return card;
+  }
+
+  function loadJournalEntries(data) {
+    journalData = data;
+    renderFilteredEntries(""); // Initially show all
+  }
+
+  function renderFilteredEntries(searchTerm) {
+    const container = document.getElementById("journal");
+    container.innerHTML = ""; // Clear previous
+    const filtered = journalData.filter(entry => {
+      const matchText = (entry.title + " " + entry.summary + " " + entry.tags.join(" ")).toLowerCase();
+      return matchText.includes(searchTerm.toLowerCase());
+    });
+
+    filtered.forEach(entry => {
+      const card = createJournalCard(entry);
+      container.appendChild(card);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
+
+    // Hook into search input
+    document.getElementById("journalSearch").addEventListener("input", e => {
+      renderFilteredEntries(e.target.value);
+    });
+  });
+
+  fetch('journal.json')
     .then(res => res.json())
     .then(data => loadJournalEntries(data))
     .catch(err => console.error("Failed to load journal data:", err));
