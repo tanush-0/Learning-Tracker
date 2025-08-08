@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
 });
 
+// For journalSearch live filter logic
+document.getElementById("journalSearch").addEventListener("input", () => {
+  const query = document.getElementById("journalSearch").value.toLowerCase();
+  document.querySelectorAll(".entry-card").forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(query) ? "block" : "none";
+  });
+});
+
 // For insert journal cards dynamically
 function createJournalCard(entry) {
     const card = document.createElement("article");
