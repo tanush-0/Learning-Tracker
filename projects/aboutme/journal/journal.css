@@ -19,7 +19,7 @@
     --text-color: #f4f4f4;
     --primary: #89CFF0;                /* Soft blue for accents/links */
     --primary-hover: #1e3a56;          /* Slightly darker blue */
-    --secondary: #1e1e1e;              /* For skill tags or secondary blocks */
+    --secondary: #242424;              /* For skill tags or secondary blocks */
     --card-bg: #1e1e1e;
     --nav-bg: #1a1a1a;
     --footer-bg: #1a1a1a;
@@ -149,11 +149,23 @@ button:focus-visible{
     outline: 2px dashed var(--primary);
     outline-offset: 3px;
 }
+/* Fade-in animation for journal cards */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.4s ease forwards;
+}
 .footer {
     text-align: center;
     padding: 15px;
     background-color: var(--footer-bg);
     color: white;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @media (max-width: 768px) {
     .navbar {

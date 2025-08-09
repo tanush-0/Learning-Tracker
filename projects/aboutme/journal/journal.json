@@ -1,21 +1,180 @@
 [
-    {
-        "title": "Day 1 – HTML Basics", 
-        "tags": ["html", "basics"], 
-        "summary": "Learned semantic HTML and basic structure.", 
-        "details": "Explored tags like `<!DOCTYPE>`, `<header>`, `<main>`, etc.", 
-        "resources": [
-            {"label": "MDN HTML Intro", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"}
-        ]
-    }, 
-        
-    {
-        "title": "Day 2 – CSS Fundamentals", 
-        "tags": ["css", "styling"], 
-        "summary": "Applied base styling, layout structure, and hover effects.", 
-        "details": "Used flexbox, reset CSS, and created a consistent card layout.", 
-        "resources": [
-            {"label": "CSS Layout on MDN", "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout"}
-        ]
-    }
+  {
+    "day": 1,
+    "title": "HTML Foundations & Semantic Structure",
+    "type": "Skill",
+    "summary": "Built the foundation of the 'About Me' project with semantic HTML elements and clear structure.",
+    "details": "Learned to use semantic HTML tags for better accessibility and SEO. Organized layout with &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt;. Added headings, paragraphs, and navigation links with proper indentation.",
+    "tags": ["HTML", "Semantic", "Structure", "Accessibility"],
+    "resources": [
+      { "label": "MDN: HTML Basics", "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" },
+      { "label": "FreeCodeCamp: HTML Tutorial", "url": "https://www.freecodecamp.org/learn/responsive-web-design/" }
+    ]
+  },
+  {
+    "day": 2,
+    "title": "CSS Fundamentals",
+    "type": "Skill",
+    "summary": "Added styling to the project using CSS variables, layout properties, and responsive design basics.",
+    "details": "Implemented CSS variables for colors and shadows. Applied flexbox for layout alignment. Introduced consistent typography and spacing. Prepared for light and dark themes by planning variable overrides.",
+    "tags": ["CSS", "Variables", "Flexbox", "Responsive"],
+    "resources": [
+      { "label": "MDN: CSS Basics", "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" },
+      { "label": "Flexbox Froggy Game", "url": "https://flexboxfroggy.com/" }
+    ]
+  },
+  {
+    "day": 3,
+    "title": "Dark Mode Implementation",
+    "type": "Skill",
+    "summary": "Introduced light/dark mode theme switching with CSS variables.",
+    "details": "Added `.dark-mode` class to &lt;body&gt; to swap CSS variable values. Used JavaScript to toggle themes. Ensured smooth transitions between modes using `transition: all 0.3s ease-in-out`.",
+    "tags": ["CSS", "Dark Mode", "JavaScript"],
+    "resources": [
+      { "label": "CSS Tricks: Dark Mode", "url": "https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/" }
+    ]
+  },
+  {
+    "day": 4,
+    "title": "Responsive Navbar & Layout",
+    "type": "Skill",
+    "summary": "Made navbar and layout adapt to mobile screens.",
+    "details": "Used media queries to stack navbar items vertically on small screens. Adjusted paddings, margins, and button sizes for better mobile usability.",
+    "tags": ["Responsive", "Navbar", "CSS"],
+    "resources": [
+      { "label": "MDN: Responsive Design", "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" }
+    ]
+  },
+  {
+    "day": 5,
+    "title": "Button Styling & Info Toggle",
+    "type": "Skill",
+    "summary": "Enhanced dark mode and info toggle buttons for better UI/UX.",
+    "details": "Applied custom hover effects, focus outlines, and shadows to buttons. Added ARIA attributes for accessibility. Implemented 'More Info' toggle to reveal hidden content.",
+    "tags": ["UI", "Buttons", "Accessibility"],
+    "resources": [
+      { "label": "MDN: ARIA Practices", "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" }
+    ]
+  },
+  {
+    "day": 6,
+    "title": "CSS Cleanup & Theme Refinement",
+    "type": "Skill",
+    "summary": "Cleaned up CSS variables and improved theme contrast.",
+    "details": "Grouped light and dark theme variables. Ensured consistent shadows, borders, and hover states. Reduced redundancy in color declarations.",
+    "tags": ["CSS", "Refactoring", "Theme"],
+    "resources": [
+      { "label": "Refactoring UI Tips", "url": "https://refactoringui.com/" }
+    ]
+  },
+  {
+    "day": 7,
+    "title": "JavaScript Modularization",
+    "type": "Skill",
+    "summary": "Moved inline JavaScript to external `main.js` file.",
+    "details": "Separated HTML and JavaScript for cleaner code. Wrapped logic inside `DOMContentLoaded` to ensure DOM elements are loaded before event binding.",
+    "tags": ["JavaScript", "Modular", "Best Practices"],
+    "resources": [
+      { "label": "MDN: DOMContentLoaded", "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event" }
+    ]
+  },
+  {
+    "day": 8,
+    "title": "Cleanup & Understanding",
+    "type": "Skill",
+    "summary": "Removed extra UI experiments and reverted to clean, stable layout.",
+    "details": "Eliminated unnecessary tabbed/modal interfaces. Kept dark mode and info toggle as the only interactive features for simplicity.",
+    "tags": ["Refactoring", "UI", "Cleanup"],
+    "resources": []
+  },
+  {
+    "day": 9,
+    "title": "Modal Window Planning",
+    "type": "Skill",
+    "summary": "Planned modal windows for notes/resources display.",
+    "details": "Explored modal vs tabbed UI in terms of UX and technical complexity. Focused on accessibility — focus trap, keyboard navigation.",
+    "tags": ["UI", "Modal", "Planning"],
+    "resources": []
+  },
+  {
+    "day": 10,
+    "title": "Projects Section Starter",
+    "type": "Skill",
+    "summary": "Created starter HTML/CSS for Projects section.",
+    "details": "Added new section layout for showcasing projects with responsive grid. Styled cards with hover effects.",
+    "tags": ["HTML", "CSS", "Projects"],
+    "resources": []
+  },
+  {
+    "day": 11,
+    "title": "Research — Benign Malware & UCM",
+    "type": "Study",
+    "summary": "Studied benign-looking malware and uniform circular motion.",
+    "details": "Learned about research-oriented, non-destructive malware. Reviewed equations and concepts for uniform circular motion in physics.",
+    "tags": ["Cybersecurity", "Physics", "Malware", "UCM"],
+    "resources": []
+  },
+  {
+    "day": 12,
+    "title": "Journal Enhancements",
+    "type": "Skill",
+    "summary": "Made journal sections reusable and interactive.",
+    "details": "Added tagging and filtering, jump links in navbar, collapsible 'Read More' details, and learning resources under each entry.",
+    "tags": ["JavaScript", "UI", "Filtering"],
+    "resources": []
+  },
+  {
+    "day": 13,
+    "title": "Cybersecurity Section Structure",
+    "type": "Skill",
+    "summary": "Started structuring Cybersecurity section.",
+    "details": "Prepared reusable card layout for cybersecurity notes and case studies.",
+    "tags": ["Cybersecurity", "HTML", "CSS"],
+    "resources": []
+  },
+  {
+    "day": 14,
+    "title": "Feature Planning — Search & Dynamic Content",
+    "type": "Skill",
+    "summary": "Planned search, filtering, and JSON-based content loading.",
+    "details": "Outlined features like reusable components, animations on scroll, and theme persistence with localStorage.",
+    "tags": ["Planning", "JavaScript", "Features"],
+    "resources": []
+  },
+  {
+    "day": 15,
+    "title": "Study — SQL Injection vs XSS",
+    "type": "Study",
+    "summary": "Compared SQL Injection and Cross-Site Scripting attacks.",
+    "details": "Learned differences, attack vectors, and prevention methods for both vulnerabilities.",
+    "tags": ["Cybersecurity", "Web Security"],
+    "resources": []
+  },
+  {
+    "day": 16,
+    "title": "Journal Data Structure",
+    "type": "Skill",
+    "summary": "Created JSON format for journal entries and dynamic rendering setup.",
+    "details": "Structured `journal.json` with title, summary, tags, and resources. Linked it to rendering functions in JavaScript.",
+    "tags": ["JavaScript", "JSON", "Dynamic Content"],
+    "resources": []
+  },
+  {
+    "day": 17,
+    "title": "Search Bar Implementation",
+    "type": "Skill",
+    "summary": "Added live search for Projects and Journal sections.",
+    "details": "Implemented case-insensitive search filtering based on tags and content text.",
+    "tags": ["JavaScript", "Search", "Filtering"],
+    "resources": []
+  },
+  {
+    "day": 18,
+    "title": "Dynamic Journal Rendering",
+    "type": "Skill",
+    "summary": "Rendered journal entries dynamically from JSON with animations.",
+    "details": "Used `fetch` to load entries and applied fade-in animation on render. Cleaned up rendering function for maintainability.",
+    "tags": ["JavaScript", "Dynamic Content", "Animation"],
+    "resources": []
+  }
 ]
