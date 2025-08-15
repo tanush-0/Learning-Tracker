@@ -15,7 +15,7 @@
 
 ## Common Numbers Polar Form Table
 
-|\( z \)       |\( r = z \)   |(Principal) \( {Arg}(z) \)|Polar form \( r(\cos\theta + i sin\theta) \)|Exponential form         |
+|\( z \)       |\( r = z \)   |(Principal) \( {Arg}(z) \)|Polar form \( r(cos𝜃 + i sin𝜃) \)           |Exponential form         |
 |--------------|--------------|--------------------------|--------------------------------------------|-------------------------|
 |\( 1 \)       |\( 1 \)       |\( 0 \)                   |\( 1(cos 0 + i sin 0) \)                    |\( e^{i 0} \)            | 
 |\( -1 \)      |\( 1 \)       |\( π \)                   |\( 1(cos π + i sin π) \)                    |\( e^{i π} \)            |
