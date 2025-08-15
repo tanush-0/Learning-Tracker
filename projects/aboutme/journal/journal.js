@@ -1,27 +1,32 @@
+// ==============================
+// Dark Mode Toggle
+// ==============================
 function toggleDarkMode() {
   const isDark = document.body.classList.toggle("dark-mode");
   const darkModeToggle = document.getElementById("darkModeToggle");
-  darkModeToggle.setAttribute("aria-pressed", isDark);
+  if (darkModeToggle) {
+    darkModeToggle.setAttribute("aria-pressed", isDark);
+  }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
-});
-
 // ==============================
-// Journal Rendering + Search + Animations
+// Global Variables
 // ==============================
-
 let journalData = [];
+let selectedCategory = "all";
+let sortDirection = "desc"; // Default: newest first
 
-// Create one journal card element
+// ==============================
+// Create Journal Card
+// ==============================
 function createJournalCard(entry) {
   const card = document.createElement("article");
-  card.className = "entry-card fade-in"; // animation class added
+  card.className = "entry-card fade-in";
   card.setAttribute("data-tags", entry.tags.join(" ").toLowerCase());
 
   card.innerHTML = `
     <h3>${entry.title}</h3>
+    <p><strong>Date:</strong> ${entry.date}</p>
     <p><strong>Tags:</strong> ${entry.tags.map(tag => `<span class="tag">${tag}</span>`).join(" ")}</p>
     <p>${entry.summary}</p>
     <details>
@@ -37,18 +42,27 @@ function createJournalCard(entry) {
       </div>` : ""
     }
   `;
-
   return card;
 }
 
-// Render filtered entries
+// ==============================
+// Render Filtered + Sorted Entries
+// ==============================
 function renderFilteredEntries(searchTerm = "") {
   const container = document.getElementById("journal");
-  container.innerHTML = ""; // Clear previous
+  container.innerHTML = "";
 
-  const filtered = journalData.filter(entry => {
-    const searchIn = (entry.title + " " + entry.summary + " " + entry.tags.join(" ")).toLowerCase();
-    return searchIn.includes(searchTerm.toLowerCase());
+  let filtered = journalData.filter(entry => {
+    const matchText = (entry.title + " " + entry.summary + " " + entry.tags.join(" ")).toLowerCase();
+    const categoryMatch = selectedCategory === "all" || (entry.category && entry.category.toLowerCase() === selectedCategory.toLowerCase());
+    return matchText.includes(searchTerm.toLowerCase()) && categoryMatch;
+  });
+
+  // Sort by date
+  filtered.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return sortDirection === "asc" ? dateA - dateB : dateB - dateA;
   });
 
   if (filtered.length === 0) {
@@ -58,30 +72,34 @@ function renderFilteredEntries(searchTerm = "") {
 
   filtered.forEach((entry, index) => {
     const card = createJournalCard(entry);
-    card.style.animationDelay = `${index * 0.5}s`; // stagger animation
+    card.style.animationDelay = `${index * 0.1}s`; // stagger animation
     container.appendChild(card);
   });
 }
 
-// Load entries from JSON
+// ==============================
+// Load Entries from JSON
+// ==============================
 async function loadJournalEntries() {
   try {
     const res = await fetch("journal.json");
     journalData = await res.json();
-    renderFilteredEntries(); // Initial render
+    renderFilteredEntries();
   } catch (err) {
     console.error("Failed to load journal data:", err);
     document.getElementById("journal").innerHTML = `<p>Failed to load journal entries.</p>`;
   }
 }
 
-// Init after DOM loads
+// ==============================
+// Event Listeners Setup
+// ==============================
 document.addEventListener("DOMContentLoaded", () => {
-  // Dark mode toggle (assumes toggleDarkMode exists globally)
+  // Dark mode
   const darkToggle = document.getElementById("darkModeToggle");
   if (darkToggle) darkToggle.addEventListener("click", toggleDarkMode);
 
-  // Search bar live filtering
+  // Search
   const journalSearch = document.getElementById("journalSearch");
   if (journalSearch) {
     journalSearch.addEventListener("input", e => {
@@ -89,6 +107,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Load the entries
+  // Category filter
+  document.querySelectorAll(".filter-buttons button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-buttons button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      selectedCategory = btn.dataset.category;
+      renderFilteredEntries(journalSearch ? journalSearch.value : "");
+    });
+  });
+
+  // Sort toggle
+  const sortToggle = document.getElementById("sortToggle");
+  if (sortToggle) {
+    sortToggle.addEventListener("click", () => {
+      sortDirection = sortDirection === "asc" ? "desc" : "asc";
+      renderFilteredEntries(journalSearch ? journalSearch.value : "");
+      sortToggle.textContent = `Sort: ${sortDirection === "asc" ? "Oldest → Newest" : "Newest → Oldest"}`;
+    });
+  }
+
+  // Load data
   loadJournalEntries();
 });

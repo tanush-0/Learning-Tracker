@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tanush - Journal</title>
-  <link href="journal.css" rel="stylesheet" />
-  <script src="journal.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Journal</title>
+  <link rel="stylesheet" href="journal.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <a href="https://tanush-0.github.io/Learning-Tracker/projects/aboutme" class="active">Home</a>
-    </nav>
-  </header>
 
-  <section class="search-section" style="margin-top: 20px;">
-    <input type="search" id="journalSearch" placeholder="🔍 Search journal entries..." aria-label="Search journal" />
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="https://tanush-0.github.io/Learning-Tracker/projects/aboutme">Home</a>
+  </nav>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <input type="text" id="journalSearch" placeholder="🔍 Search journal entries..." aria-label="Search journal entries" />
   </section>
 
+  <!-- Filter Buttons -->
+  <section class="filter-buttons">
+    <button data-category="all" class="active">All</button>
+    <button data-category="skill">Skills</button>
+    <button data-category="study">Study</button>
+    <button data-category="project">Projects</button>
+    <button data-category="cybersecurity">Cybersecurity</button>
+    <button id="sortToggle">Sort: Newest → Oldest</button>
+  </section>
+
+  <button id="darkModeToggle" aria-pressed="false">🌙 Dark Mode</button>
+
+  <!-- Journal Entries -->
   <section id="journal" class="journal-section">
-      <h2>📝 My Learning Journal</h2>
-      <!-- Dynamic journal cards will be inserted here by JS -->
+    <h2>📓 My Journal</h2>
+    <!-- Entries will render here dynamically -->
   </section>
 
-  <section style="margin: 5px;">
-    <button aria-label="Toggle Dark Mode" aria-pressed="false" id="darkModeToggle">Toggle Dark Mode</button>
-  </section>
-
-  <footer class="footer" role="contentinfo">
-    © 2025 Tanush. All rights reserved.
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Tanush's Learning Journal</p>
   </footer>
+
+  <script src="journal.js"></script>
 </body>
 </html>

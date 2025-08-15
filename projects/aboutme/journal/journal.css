@@ -2,7 +2,7 @@
     --bg-color: #f4f4f4;
     --text-color: #333;
     --primary: #007acc;
-    --primary-hover:#e0f0ff;
+    --primary-hover: #e0f0ff;
     --secondary: #f4f4f4;
     --card-bg: #fff;
     --nav-bg: #007acc;
@@ -17,16 +17,16 @@
 .dark-mode {
     --bg-color: #121212;
     --text-color: #f4f4f4;
-    --primary: #89CFF0;                /* Soft blue for accents/links */
-    --primary-hover: #1e3a56;          /* Slightly darker blue */
-    --secondary: #242424;              /* For skill tags or secondary blocks */
+    --primary: #89CFF0;
+    --primary-hover: #1e3a56;
+    --secondary: #1e1e1e;
     --card-bg: #1e1e1e;
     --nav-bg: #1a1a1a;
     --footer-bg: #1a1a1a;
     --button-bg: #1a1a1a;
     --button-hover: #333333;
     --button-hover-text: #89CFF0;
-    --border-light: #444;              /* Slight border contrast */
+    --border-light: #444;
     --button-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
@@ -72,6 +72,7 @@ body {
 #journalSearch {
     width: 100%;
     max-width: 400px;
+    margin: 10px 1px 10px 1px;
     padding: 10px 14px;
     font-size: 1rem;
     border-radius: 6px;
@@ -83,6 +84,41 @@ body {
     outline: 2px dashed var(--primary);
     outline-offset: 3px;
 }
+
+/* Filter buttons - cohesive with search section */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filter-buttons button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-light);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: var(--button-shadow);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.filter-buttons button:hover {
+    background-color: var(--button-hover);
+    color: var(--button-hover-text);
+    transform: translateY(-2px);
+}
+.filter-buttons button.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+.filter-buttons button:focus-visible {
+    outline: 2px dashed var(--primary);
+    outline-offset: 3px;
+}
+
 .journal-section {
     margin-top: 40px;
     padding: 20px;
@@ -140,10 +176,16 @@ button {
     box-shadow: var(--button-shadow);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
+#darkModeToggle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    align-self: center;
+}
 button:hover {
     background-color: var(--button-hover);
     color: var(--button-hover-text);
-    transform: translateY(-2px); /* subtle lift effect */
+    transform: translateY(-2px);
 }
 button:focus-visible{
     outline: 2px dashed var(--primary);

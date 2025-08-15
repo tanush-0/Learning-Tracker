@@ -2,7 +2,8 @@
   {
     "day": 1,
     "title": "HTML Foundations & Semantic Structure",
-    "type": "Skill",
+    "date": "22-07-2025",
+    "categary": "Skill",
     "summary": "Built the foundation of the 'About Me' project with semantic HTML elements and clear structure.",
     "details": "Learned to use semantic HTML tags for better accessibility and SEO. Organized layout with &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt;. Added headings, paragraphs, and navigation links with proper indentation.",
     "tags": ["HTML", "Semantic", "Structure", "Accessibility"],
@@ -14,7 +15,8 @@
   {
     "day": 2,
     "title": "CSS Fundamentals",
-    "type": "Skill",
+    "date": "23-07-2025",
+    "categary": "Skill",
     "summary": "Added styling to the project using CSS variables, layout properties, and responsive design basics.",
     "details": "Implemented CSS variables for colors and shadows. Applied flexbox for layout alignment. Introduced consistent typography and spacing. Prepared for light and dark themes by planning variable overrides.",
     "tags": ["CSS", "Variables", "Flexbox", "Responsive"],
@@ -26,7 +28,8 @@
   {
     "day": 3,
     "title": "Dark Mode Implementation",
-    "type": "Skill",
+    "date": "24-07-2025",
+    "categary": "Skill",
     "summary": "Introduced light/dark mode theme switching with CSS variables.",
     "details": "Added `.dark-mode` class to &lt;body&gt; to swap CSS variable values. Used JavaScript to toggle themes. Ensured smooth transitions between modes using `transition: all 0.3s ease-in-out`.",
     "tags": ["CSS", "Dark Mode", "JavaScript"],
@@ -37,7 +40,8 @@
   {
     "day": 4,
     "title": "Responsive Navbar & Layout",
-    "type": "Skill",
+    "date": "25-07-2025",
+    "categary": "Skill",
     "summary": "Made navbar and layout adapt to mobile screens.",
     "details": "Used media queries to stack navbar items vertically on small screens. Adjusted paddings, margins, and button sizes for better mobile usability.",
     "tags": ["Responsive", "Navbar", "CSS"],
@@ -48,7 +52,8 @@
   {
     "day": 5,
     "title": "Button Styling & Info Toggle",
-    "type": "Skill",
+    "date": "26-07-2025",
+    "categary": "Skill",
     "summary": "Enhanced dark mode and info toggle buttons for better UI/UX.",
     "details": "Applied custom hover effects, focus outlines, and shadows to buttons. Added ARIA attributes for accessibility. Implemented 'More Info' toggle to reveal hidden content.",
     "tags": ["UI", "Buttons", "Accessibility"],
@@ -59,7 +64,8 @@
   {
     "day": 6,
     "title": "CSS Cleanup & Theme Refinement",
-    "type": "Skill",
+    "date": "27-07-2025",
+    "categary": "Skill",
     "summary": "Cleaned up CSS variables and improved theme contrast.",
     "details": "Grouped light and dark theme variables. Ensured consistent shadows, borders, and hover states. Reduced redundancy in color declarations.",
     "tags": ["CSS", "Refactoring", "Theme"],
@@ -70,7 +76,8 @@
   {
     "day": 7,
     "title": "JavaScript Modularization",
-    "type": "Skill",
+    "date": "28-07-2025",
+    "categary": "Skill",
     "summary": "Moved inline JavaScript to external `main.js` file.",
     "details": "Separated HTML and JavaScript for cleaner code. Wrapped logic inside `DOMContentLoaded` to ensure DOM elements are loaded before event binding.",
     "tags": ["JavaScript", "Modular", "Best Practices"],
@@ -81,7 +88,8 @@
   {
     "day": 8,
     "title": "Cleanup & Understanding",
-    "type": "Skill",
+    "date": "29-07-2025",
+    "categary": "Skill",
     "summary": "Removed extra UI experiments and reverted to clean, stable layout.",
     "details": "Eliminated unnecessary tabbed/modal interfaces. Kept dark mode and info toggle as the only interactive features for simplicity.",
     "tags": ["Refactoring", "UI", "Cleanup"],
@@ -90,7 +98,8 @@
   {
     "day": 9,
     "title": "Modal Window Planning",
-    "type": "Skill",
+    "date": "30-07-2025",
+    "categary": "Skill",
     "summary": "Planned modal windows for notes/resources display.",
     "details": "Explored modal vs tabbed UI in terms of UX and technical complexity. Focused on accessibility — focus trap, keyboard navigation.",
     "tags": ["UI", "Modal", "Planning"],
@@ -99,7 +108,8 @@
   {
     "day": 10,
     "title": "Projects Section Starter",
-    "type": "Skill",
+    "date": "31-07-2025",
+    "categary": "Skill",
     "summary": "Created starter HTML/CSS for Projects section.",
     "details": "Added new section layout for showcasing projects with responsive grid. Styled cards with hover effects.",
     "tags": ["HTML", "CSS", "Projects"],
@@ -108,7 +118,8 @@
   {
     "day": 11,
     "title": "Research — Benign Malware & UCM",
-    "type": "Study",
+    "date": "01-08-2025",
+    "categary": "Study",
     "summary": "Studied benign-looking malware and uniform circular motion.",
     "details": "Learned about research-oriented, non-destructive malware. Reviewed equations and concepts for uniform circular motion in physics.",
     "tags": ["Cybersecurity", "Physics", "Malware", "UCM"],
@@ -117,7 +128,8 @@
   {
     "day": 12,
     "title": "Journal Enhancements",
-    "type": "Skill",
+    "date": "02-08-2025",
+    "categary": "Skill",
     "summary": "Made journal sections reusable and interactive.",
     "details": "Added tagging and filtering, jump links in navbar, collapsible 'Read More' details, and learning resources under each entry.",
     "tags": ["JavaScript", "UI", "Filtering"],
@@ -126,7 +138,8 @@
   {
     "day": 13,
     "title": "Cybersecurity Section Structure",
-    "type": "Skill",
+    "date": "03-08-2025",
+    "categary": "Skill",
     "summary": "Started structuring Cybersecurity section.",
     "details": "Prepared reusable card layout for cybersecurity notes and case studies.",
     "tags": ["Cybersecurity", "HTML", "CSS"],
@@ -135,7 +148,8 @@
   {
     "day": 14,
     "title": "Feature Planning — Search & Dynamic Content",
-    "type": "Skill",
+    "date": "04-08-2025",
+    "categary": "Skill",
     "summary": "Planned search, filtering, and JSON-based content loading.",
     "details": "Outlined features like reusable components, animations on scroll, and theme persistence with localStorage.",
     "tags": ["Planning", "JavaScript", "Features"],
@@ -144,7 +158,8 @@
   {
     "day": 15,
     "title": "Study — SQL Injection vs XSS",
-    "type": "Study",
+    "date": "05-08-2025",
+    "categary": "Study",
     "summary": "Compared SQL Injection and Cross-Site Scripting attacks.",
     "details": "Learned differences, attack vectors, and prevention methods for both vulnerabilities.",
     "tags": ["Cybersecurity", "Web Security"],
@@ -153,7 +168,8 @@
   {
     "day": 16,
     "title": "Journal Data Structure",
-    "type": "Skill",
+    "date": "06-08-2025",
+    "categary": "Skill",
     "summary": "Created JSON format for journal entries and dynamic rendering setup.",
     "details": "Structured `journal.json` with title, summary, tags, and resources. Linked it to rendering functions in JavaScript.",
     "tags": ["JavaScript", "JSON", "Dynamic Content"],
@@ -162,7 +178,8 @@
   {
     "day": 17,
     "title": "Search Bar Implementation",
-    "type": "Skill",
+    "date": "07-08-2025",
+    "categary": "Skill",
     "summary": "Added live search for Projects and Journal sections.",
     "details": "Implemented case-insensitive search filtering based on tags and content text.",
     "tags": ["JavaScript", "Search", "Filtering"],
@@ -171,7 +188,8 @@
   {
     "day": 18,
     "title": "Dynamic Journal Rendering",
-    "type": "Skill",
+    "date": "08-08-2025",
+    "categary": "Skill",
     "summary": "Rendered journal entries dynamically from JSON with animations.",
     "details": "Used `fetch` to load entries and applied fade-in animation on render. Cleaned up rendering function for maintainability.",
     "tags": ["JavaScript", "Dynamic Content", "Animation"],
