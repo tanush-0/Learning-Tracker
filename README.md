@@ -19,6 +19,7 @@ Each week I log what I’ve learned, built, or explored. Check the `progress/` f
 | Project        | Description                  | Status   |
 |----------------|------------------------------|----------|
 | AboutMe | About Me website using HTML/CSS/JS | ✅ DONE |
+|Greet New Year | New Year Greeting using HTML/CSS/JS | ✅ DONE |
 | Portfolio Site | Personal website using HTML/CSS/JS | 🚧 Soon |
 | CyberSecurity Challenges | Practice of some CTF | 🔨 WIP |
 
