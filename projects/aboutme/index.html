@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +13,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NVGXQYYYZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-2NVGXQYYYZ');
@@ -32,7 +33,8 @@
   <main class="main-content" role="main">
     <article class="card">
       <h1>Hello, I'm Tanush!</h1>
-      <p>I'm a class 11th student working hard on my JEE preparation while learning Full-Stack Development with a focus on Cybersecurity.</p>
+      <p>I'm a class 11th student working hard on my JEE preparation while learning Full-Stack Development with a focus
+        on Cybersecurity.</p>
       <p>This is my very new website. I created it from scratch using only HTML, CSS, and a little JavaScript!</p>
       <p>✨ More to come soon…</p>
     </article>
@@ -46,13 +48,8 @@
         <h3>About Me Page</h3>
         <p>This responsive site showcases my HTML, CSS, and JS skills built from scratch.</p>
         <a href="https://tanush-0.github.io/Learning-Tracker/projects/aboutme" target="_blank" class="btn">Live Demo</a>
-        <a href="https://github.com/tanush-0/Learning-Tracker/tree/main/projects/aboutme" target="_blank" class="btn">View Code</a>
-      </div>
-      <div class="project-card" data-tags="html css js javascript">
-        <h3>New Year Greeting</h3>
-        <p></p>
-        <a href="https://tanush-0.github.io/New-Year" target="_blank" class="btn">Live Demo</a>
-        <a href="https://github.com/tanush-0/New-Year" target="_blank" class="btn">View Code</a>
+        <a href="https://github.com/tanush-0/Learning-Tracker/tree/main/projects/aboutme" target="_blank"
+          class="btn">View Code</a>
       </div>
       <div class="project-card" data-tags="html linux cybersecurity">
         <h3>Cybersecurity Challenges</h3>
@@ -75,7 +72,8 @@
       <span class="badge warning">⚠️ Medium Risk</span>
       <p class="entry-summary">Benign-looking malware looks harmless but can be dangerous.</p>
       <p class="entry-details hidden">
-        These malware types include clipboard hijackers or disguised system tools. They're hard to detect and often escape antivirus tools by pretending to be utilities.<br>
+        These malware types include clipboard hijackers or disguised system tools. They're hard to detect and often
+        escape antivirus tools by pretending to be utilities.<br>
         🧪 Example: Clipboard crypto-jacker<br>
         📦 Example: Fake PDF reader with spyware<br>
         <strong>📚 Further Reading:</strong><br>
@@ -91,20 +89,24 @@
       <span class="badge info">🧠 Memory-based</span>
       <p class="entry-summary">Malware that operates entirely in memory, leaving no trace on disk.</p>
       <p class="entry-details hidden">
-        Fileless malware injects itself into trusted processes like PowerShell or WMI. Since it doesn’t write to disk, antivirus tools struggle to detect it.
+        Fileless malware injects itself into trusted processes like PowerShell or WMI. Since it doesn’t write to disk,
+        antivirus tools struggle to detect it.
         Common delivery methods include phishing emails and exploit kits.<br>
         <strong>🔗 Learn More:</strong><br>
-        <a href="https://www.crowdstrike.com/cybersecurity-101/malware/fileless-malware/" target="_blank">CrowdStrike – Fileless Malware</a><br>
-        <a href="https://www.techtarget.com/searchsecurity/definition/fileless-malware" target="_blank">TechTarget Explanation</a><br>
+        <a href="https://www.crowdstrike.com/cybersecurity-101/malware/fileless-malware/" target="_blank">CrowdStrike –
+          Fileless Malware</a><br>
+        <a href="https://www.techtarget.com/searchsecurity/definition/fileless-malware" target="_blank">TechTarget
+          Explanation</a><br>
       </p>
-      <button class="toggle-button" onclick="toggleDetails(this)">Read More</button> 
+      <button class="toggle-button" onclick="toggleDetails(this)">Read More</button>
     </div>
 
     <div class="cyber-entry" id="xss-attack" data-tags="html linux cybersecurity">
       <h3>⚠️ Cyber Threat: XSS (Cross-Site Scripting)</h3>
       <span class="badge warning">🚨 High Severity</span>
       <span class="badge info">🛡️ Frontend Exploit</span>
-      <p class="entry-summary">XSS allows attackers to inject malicious JavaScript into web pages, targeting users' sessions or data.</p>
+      <p class="entry-summary">XSS allows attackers to inject malicious JavaScript into web pages, targeting users'
+        sessions or data.</p>
       <p class="entry-details hidden">
         Example: A comment box accepts HTML input. An attacker posts:
         <code>&lt;script&gt;alert('XSS')&lt;/script&gt;</code>
@@ -113,7 +115,8 @@
         ✅ Fix: Always sanitize and escape user input before rendering.<br>
         <strong>🔗 Learn More:</strong><br>
         <a href="https://owasp.org/www-community/attacks/xss/" target="_blank">OWASP XSS Cheat Sheet</a>
-        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting" target="_blank">MDN – What is XSS?</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting" target="_blank">MDN – What is
+          XSS?</a>
       </p>
       <button class="toggle-button" onclick="toggleDetails(this)">Read More</button>
     </div>
@@ -124,9 +127,11 @@
         <li><strong>SQL Injection</strong>: Targets backend (DB), bypasses login or destroys data.</li>
         <li><strong>XSS</strong>: Targets frontend (browser), hijacks sessions or injects scripts.</li>
         <li><strong>SQLi Prevention</strong>: Use <code>Prepared Statements</code>, validate input.</li>
-        <li><strong>XSS Prevention</strong>: Use <code>textContent</code>, escape input, avoid <code>innerHTML</code>.</li>
+        <li><strong>XSS Prevention</strong>: Use <code>textContent</code>, escape input, avoid <code>innerHTML</code>.
+        </li>
       </ul>
-      <p><a href="https://tanush-0.github.io/Learning-Tracker/resources/security/sql-vs-xss.md" target="_blank">📄 Full notes (markdown)</a></p>
+      <p><a href="https://tanush-0.github.io/Learning-Tracker/resources/security/sql-vs-xss.md" target="_blank">📄 Full
+          notes (markdown)</a></p>
     </article>
 
     <div class="cyber-entry" id="git-resources">
@@ -134,7 +139,8 @@
       <ul>
         <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></li>
         <li><a href="https://learngitbranching.js.org/" target="_blank">Interactive Git Branching (Visual)</a></li>
-        <li><a href="https://www.freecodecamp.org/news/git-cheat-sheet/" target="_blank">freeCodeCamp Git Cheat Sheet</a></li>
+        <li><a href="https://www.freecodecamp.org/news/git-cheat-sheet/" target="_blank">freeCodeCamp Git Cheat
+            Sheet</a></li>
         <li><a href="https://github.com/git-guides/" target="_blank">Official Git Guides (GitHub)</a></li>
       </ul>
     </div>
@@ -143,7 +149,7 @@
 
   <section id="physics-recap" class="physics-recap" aria-label="Physics Concepts">
     <h2>🧠 Quick Concept Recap – Physics</h2>
-    
+
     <div class="formula-card">
       <h3>Uniform Circular Motion</h3>
       <p><strong>Centripetal Acceleration:</strong> a = v² / r</p>
@@ -152,14 +158,15 @@
     </div>
   </section>
 
-  
+
 
   <section style="margin: 5px;">
     <button aria-label="Toggle Dark Mode" aria-pressed="false" id="darkModeToggle">Toggle Dark Mode</button>
     <button aria-label="Toggle More Info" aria-expanded="false" id="infoToggle">Show More Info</button>
 
     <div id="extra-info" hidden>
-      <p>I love exploring how websites are built, and I'm especially curious about Cybersecurity and Ethical Hacking. This journey will be full of code and caffeine!</p>
+      <p>I love exploring how websites are built, and I'm especially curious about Cybersecurity and Ethical Hacking.
+        This journey will be full of code and caffeine!</p>
       <section class="skills" aria-label="Skills section">
         <div class="skill-tag">HTML</div>
         <div class="skill-tag">CSS</div>
@@ -176,4 +183,5 @@
     © 2025 Tanush. All rights reserved.
   </footer>
 </body>
+
 </html>
